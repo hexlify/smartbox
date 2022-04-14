@@ -1,5 +1,5 @@
 import sqlite3
-import datetime
+from datetime import datetime
 from lcd import LCD
 
 DB_NAME = 'data.db'
