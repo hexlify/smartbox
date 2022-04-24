@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 from time import sleep, time
 import telebot
+import os
 from mailbox import Mailbox
 from threading import Thread
 
@@ -9,11 +10,12 @@ TRIG = 23
 ECHO = 24
 
 # телеграм бот
-token = "5235740063:AAFe0mkLrcV20GrCM1cgrjZ2S3eBqioMPIY"
-me = '113606779'
-bot = telebot.TeleBot(token=token, parse_mode=None)
+token = os.getenv('BOT_TOKEN')
 
-# почтовый ящик
+# твой телеграм профиль
+me = os.getenv('CHAT_ID')
+
+bot = telebot.TeleBot(token=token, parse_mode=None)
 m = Mailbox()
 
 

@@ -6,6 +6,15 @@
 sudo apt-get install -y i2c-tools python3-smbus # взаимодействие через I2C
 pip install pyTelegramBotAPI # библиотека для Telegram бота
 ```
+## Запуск
+
+```bash
+export CHAT_ID=...       # айди Телеграм аккаунта
+export BOT_TOKEN=...    # токен Телеграм бота
+
+python main.py
+```
+
 
 ## Описание
 
